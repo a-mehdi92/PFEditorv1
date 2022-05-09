@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_21bb620ec398492ab9bdb593e0c2ecc1 }}/amehdi92/pfeditor:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_21bb620ec398492ab9bdb593e0c2ecc1 }}/pfeditor:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'PFEditor'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_0902c5e2b26c464da7b70b0e11858071 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_21bb620ec398492ab9bdb593e0c2ecc1 }}/amehdi92/pfeditor:${{ github.sha }}'
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_21bb620ec398492ab9bdb593e0c2ecc1 }}/pfeditor:${{ github.sha }}'
