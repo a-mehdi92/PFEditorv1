@@ -65,7 +65,6 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 
                 $result = sqlsrv_query($conn, "select * from librairie");
                 while ($row =sqlsrv_fetch_array($result, SQLSRV_FETCH_NUMERIC))  {  }
-pg_close($conn);
 ?>
                 <form>
                     <div class="col-mb-5 col-form-label">
