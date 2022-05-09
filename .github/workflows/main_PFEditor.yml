@@ -30,7 +30,7 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/rhizlaine/projet_web:${{ github.sha }}
+        tags: index.docker.io/amehdi92/pfeditor:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -48,4 +48,4 @@ jobs:
         app-name: 'PFEditor'
         slot-name: 'production'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_0902c5e2b26c464da7b70b0e11858071 }}
-        images: 'index.docker.io/rhizlaine/projet_web:${{ github.sha }}'
+        images: 'index.docker.io/amehdi92/pfeditor:${{ github.sha }}'
