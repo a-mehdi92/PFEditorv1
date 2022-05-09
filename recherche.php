@@ -61,12 +61,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <?php     
 
-                $result = sqlsrv_query($conn, "select * from librairie");
-                while ($row =sqlsrv_fetch_array($result, SQLSRV_FETCH_NUMERIC))  {  }
-pg_close($conn);
-?>
                 <form>
                     <div class="col-mb-5 col-form-label">
                         <label>ISBN:</label>
