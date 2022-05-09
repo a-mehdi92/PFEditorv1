@@ -20,3 +20,4 @@ VALUES ('13435','Le Seigneur des Anneaux: L intégrale','J.R.R. TOLKIEN','https:
 
 INSERT INTO librairie(ISBN,Titre,Auteur,Lien,Annee)
 VALUES ('65435','Le petit Nicolas','Sempé-Goscinny','https://images-na.ssl-images-amazon.com/images/I/319rilH+YRL._SY344_BO1,204,203,200_.jpg',1999);
+
