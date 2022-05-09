@@ -96,7 +96,6 @@ while ($row =sqlsrv_fetch_array($result, SQLSRV_FETCH_NUMERIC)) { ?>
 <?php
   }
 
-pg_close($conn);
 ?>
 
                     <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
