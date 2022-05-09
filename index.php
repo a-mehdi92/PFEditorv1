@@ -1,7 +1,7 @@
 <?php
 // PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO("sqlsrv:server = tcp:remema-sqlsrv1.database.windows.net,1433; Database = libraire", "rememauser", "Remema2022");
+    $conn = new PDO("sqlsrv:server = tcp:remema-sqlsrv1.database.windows.net,1433; Database = libraire", "rememauser", "{your_password_here}");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
@@ -10,7 +10,7 @@ catch (PDOException $e) {
 }
 
 // SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "rememauser", "pwd" => "Remema2022", "Database" => "libraire", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$connectionInfo = array("UID" => "rememauser", "pwd" => "{your_password_here}", "Database" => "libraire", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:remema-sqlsrv1.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
