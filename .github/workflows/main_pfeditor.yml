@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy container app to Azure Web App - PFEditor
+name: Build and deploy container app to Azure Web App - pfeditor
 
 on:
   push:
@@ -23,14 +23,14 @@ jobs:
       uses: docker/login-action@v1
       with:
         registry: https://index.docker.io/v1/
-        username: ${{ secrets.AzureAppService_ContainerUsername_fb727c06572840bf8ee31a3bf1d4a1bb }}
-        password: ${{ secrets.AzureAppService_ContainerPassword_077b566b5d1a4b5ba3e2e455b9785164 }}
+        username: ${{ secrets.AzureAppService_ContainerUsername_87e703631b2a4098bed652da94cf24ae }}
+        password: ${{ secrets.AzureAppService_ContainerPassword_23df7f9d3bca457e8c2fd3ae1423d5b9 }}
 
     - name: Build and push container image to registry
       uses: docker/build-push-action@v2
       with:
         push: true
-        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_fb727c06572840bf8ee31a3bf1d4a1bb }}/pfeditor:${{ github.sha }}
+        tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_87e703631b2a4098bed652da94cf24ae }}/pfeditor:${{ github.sha }}
         file: ./Dockerfile
 
   deploy:
@@ -45,7 +45,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'PFEditor'
+        app-name: 'pfeditor'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_fb41a41c422c4236a5d4451a32440503 }}
-        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_fb727c06572840bf8ee31a3bf1d4a1bb }}/pfeditor:${{ github.sha }}'
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_103f6428184f487ba7d731fb493822fa }}
+        images: 'index.docker.io/${{ secrets.AzureAppService_ContainerUsername_87e703631b2a4098bed652da94cf24ae }}/pfeditor:${{ github.sha }}'
