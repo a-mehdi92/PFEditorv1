@@ -45,7 +45,6 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="ajout.php">Ajouter</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="recherche.php">Rechercher</a></li>
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Supprimer</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.php">Version</a></li>
                     </ul>
                     
                 </div>
