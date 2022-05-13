@@ -13,7 +13,7 @@ catch (PDOException $e) {
 $connectionInfo = array("UID" => "rememauser", "pwd" => "Remema2022", "Database" => "libraire", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:remema-sqlsrv1.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
-?>>
+?>
 
 
 <!DOCTYPE html>
@@ -68,13 +68,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
 pg_close($conn);
 ?>
 
-<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="edit.php">Editer</a></div>
-</div>
 
-<div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="index.php">Supprimer</a></div>
-</div>
                 </div>
             </div>
             <h1 class="text-center">Fin</h1></br>
