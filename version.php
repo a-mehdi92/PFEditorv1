@@ -61,7 +61,7 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
         <section class="py-5">
             <h1 class="text-center">Fin</h1></br>
             <div class="container">  
-                <p class="text-justify">Remema vous remercie!</p>
+                <p class="text-center"><img src="https://acegif.com/wp-content/gifs/the-end-1.gif" /></p>
             </div>
         </section>
         <!-- Footer-->
