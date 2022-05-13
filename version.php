@@ -59,18 +59,6 @@ $conn = sqlsrv_connect($serverName, $connectionInfo);
         </header>
         <!-- Section-->
         <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                <?php     
-
-                $result = sqlsrv_query($conn, "select * from librairie");
-                while ($row =sqlsrv_fetch_array($result, SQLSRV_FETCH_NUMERIC))  {  }
-pg_close($conn);
-?>
-
-
-                </div>
-            </div>
             <h1 class="text-center">Fin</h1></br>
             <div class="container">  
                 <p class="text-justify">Remema vous remercie!</p>
